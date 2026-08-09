@@ -15,10 +15,10 @@
 <header id="hdr">
   <div class="nav">
     <a class="brand" href="#top">
-      <img class="logo" src="astra-assets/logo-astra.png" alt="ASTRA MINDCORE logo">
+      <img class="logo" src="astra-assets/mindcore-icon-primary.svg" alt="ASTRA MINDCORE logo">
       <span class="btxt"><b>ASTRA</b><span>MINDCORE</span></span>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks" aria-hidden="true">
       <a href="#solution">Technology</a>
       <a href="#validation">Research</a>
       <a href="#award">Award</a>
@@ -26,7 +26,12 @@
       <a href="#product">About</a>
       <a href="#cta">Contact</a>
     </nav>
-    <a class="getdemo" href="#cta"><span class="d"></span>Get demo</a>
+    <div class="nav-right">
+      <a class="getdemo" href="#cta"><span class="d"></span>Get demo</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -64,7 +69,7 @@
   <div class="wrap">
     <div class="dash2 reveal" id="liveDash">
       <div class="dash2-top">
-        <div class="dash2-brand"><img src="astra-assets/logo-astra.png" alt=""><b>ASTRA MINDCORE</b></div>
+        <div class="dash2-brand"><img src="astra-assets/mindcore-icon-primary.svg" alt=""><b>ASTRA MINDCORE</b></div>
         <div class="dash2-meta">SS-ABC123 <button class="dash2-connect" type="button">Connect</button></div>
       </div>
 
@@ -109,7 +114,7 @@
           <div class="dperf-row"><div class="dperf-top"><span class="medium-txt">Medium</span><b><span class="num" data-target="14">0</span></b></div><div class="track"><div class="fill medium" data-target="60"></div></div></div>
           <div class="dperf-row"><div class="dperf-top"><span class="hard-txt">Hard</span><b><span class="num" data-target="10">0</span></b></div><div class="track"><div class="fill hard" data-target="42"></div></div></div>
         </div>
-        <div class="dcard">
+        <div class="dcard dcard-alerts">
           <div class="dcard-head">Alerts</div>
           <div class="dalerts" id="dAlerts"></div>
         </div>
@@ -193,7 +198,7 @@
           <div class="phone-notch"></div>
           <div class="phone-screen">
             <div class="app-screen active" id="scr1">
-              <img class="as-logo" src="astra-assets/logo-astra.png" alt="">
+              <img class="as-logo" src="astra-assets/mindcore-icon-primary.svg" alt="">
               <div class="as-title">ASTRA MINDCORE</div>
               <div class="as-sub">Pre-flight Cognitive Calibration</div>
               <div class="as-label">Astronaut ID</div>
@@ -263,7 +268,7 @@
       </div>
       <div class="val-cards reveal">
         <div class="val-card"><div class="val-img photo" style="background-image:url('astra-assets/asclepios.jpg')"><span class="yr">2025</span></div><div class="val-body"><h4>ASCLEPIOS</h4><p>Sasso San Gottardo, Switzerland</p></div></div>
-        <div class="val-card"><div class="val-img photo" style="background-image:url('astra-assets/lunares.jpg')"><span class="yr">2025</span></div><div class="val-body"><h4>LUNARES</h4><p>Piła, Poland · UK / EU</p></div></div>
+        <div class="val-card"><div class="val-img photo" style="background-image:url('astra-assets/lunares.jpg')"><span class="yr">2025</span></div><div class="val-body"><h4>LUNARES</h4><p>Piła, Poland</p></div></div>
       </div>
     </div>
   </div>
@@ -288,7 +293,7 @@
   <div class="wrap">
     <div class="cta reveal">
       <svg class="wave" viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M0.0,66.6 L13.3,65.8 L26.7,68.7 L40.0,47.1 L53.3,65.8 L66.7,69.3 L80.0,66.3 L93.3,71.2 L106.7,70.8 L120.0,74.7 L133.3,43.5 L146.7,66.3 L160.0,73.1 L173.3,70.8 L186.7,68.7 L200.0,65.7 L213.3,40.7 L226.7,72.7 L240.0,74.1 L253.3,67.5 L266.7,72.7 L280.0,68.0 L293.3,68.5 L306.7,71.1 L320.0,94.7 L333.3,74.2 L346.7,74.5 L360.0,97.2 L373.3,70.0 L386.7,65.8 L400.0,67.7 L413.3,65.7 L426.7,68.1 L440.0,71.8 L453.3,72.1 L466.7,68.5 L480.0,68.6 L493.3,69.9 L506.7,67.9 L520.0,69.0 L533.3,70.0 L546.7,69.0 L560.0,66.4 L573.3,70.5 L586.7,74.8 L600.0,68.8 L613.3,65.9 L626.7,71.6 L640.0,43.9 L653.3,99.9 L666.7,68.2 L680.0,73.5 L693.3,71.5 L706.7,69.6 L720.0,74.4 L733.3,70.6 L746.7,69.0 L760.0,69.0 L773.3,74.7 L786.7,66.2 L800.0,66.1 L813.3,70.4 L826.7,71.1 L840.0,39.0 L853.3,67.6 L866.7,68.7 L880.0,73.4 L893.3,69.7 L906.7,65.9 L920.0,68.5 L933.3,73.2 L946.7,65.3 L960.0,70.3 L973.3,70.4 L986.7,106.1 L1000.0,71.9 L1013.3,68.7 L1026.7,72.7 L1040.0,72.7 L1053.3,67.3 L1066.7,74.8 L1080.0,73.0 L1093.3,72.4 L1106.7,70.2 L1120.0,65.4 L1133.3,99.0 L1146.7,71.0 L1160.0,73.0 L1173.3,68.5 L1186.7,65.9 L1200.0,69.7" fill="none" stroke="#ef5f2a" stroke-width="1.1" opacity=".5"/>
+        <path d="M0.0,66.6 L13.3,65.8 L26.7,68.7 L40.0,47.1 L53.3,65.8 L66.7,69.3 L80.0,66.3 L93.3,71.2 L106.7,70.8 L120.0,74.7 L133.3,43.5 L146.7,66.3 L160.0,73.1 L173.3,70.8 L186.7,68.7 L200.0,65.7 L213.3,40.7 L226.7,72.7 L240.0,74.1 L253.3,67.5 L266.7,72.7 L280.0,68.0 L293.3,68.5 L306.7,71.1 L320.0,94.7 L333.3,74.2 L346.7,74.5 L360.0,97.2 L373.3,70.0 L386.7,65.8 L400.0,67.7 L413.3,65.7 L426.7,68.1 L440.0,71.8 L453.3,72.1 L466.7,68.5 L480.0,68.6 L493.3,69.9 L506.7,67.9 L520.0,69.0 L533.3,70.0 L546.7,69.0 L560.0,66.4 L573.3,70.5 L586.7,74.8 L600.0,68.8 L613.3,65.9 L626.7,71.6 L640.0,43.9 L653.3,99.9 L666.7,68.2 L680.0,73.5 L693.3,71.5 L706.7,69.6 L720.0,74.4 L733.3,70.6 L746.7,69.0 L760.0,69.0 L773.3,74.7 L786.7,66.2 L800.0,66.1 L813.3,70.4 L826.7,71.1 L840.0,39.0 L853.3,67.6 L866.7,68.7 L880.0,73.4 L893.3,69.7 L906.7,65.9 L920.0,68.5 L933.3,73.2 L946.7,65.3 L960.0,70.3 L973.3,70.4 L986.7,106.1 L1000.0,71.9 L1013.3,68.7 L1026.7,72.7 L1040.0,72.7 L1053.3,67.3 L1066.7,74.8 L1080.0,73.0 L1093.3,72.4 L1106.7,70.2 L1120.0,65.4 L1133.3,99.0 L1146.7,71.0 L1160.0,73.0 L1173.3,68.5 L1186.7,65.9 L1200.0,69.7" fill="none" stroke="#ff4f00" stroke-width="1.1" opacity=".5"/>
         <path d="M0.0,149.9 L13.3,150.8 L26.7,174.0 L40.0,151.1 L53.3,152.0 L66.7,149.8 L80.0,152.0 L93.3,152.1 L106.7,149.3 L120.0,153.1 L133.3,147.7 L146.7,147.6 L160.0,152.1 L173.3,152.3 L186.7,151.1 L200.0,150.3 L213.3,146.6 L226.7,151.0 L240.0,153.0 L253.3,152.6 L266.7,148.0 L280.0,148.6 L293.3,150.6 L306.7,149.4 L320.0,152.9 L333.3,149.7 L346.7,152.8 L360.0,152.9 L373.3,150.2 L386.7,146.6 L400.0,147.8 L413.3,132.3 L426.7,151.6 L440.0,148.8 L453.3,150.4 L466.7,147.2 L480.0,148.2 L493.3,151.9 L506.7,150.4 L520.0,152.9 L533.3,150.8 L546.7,150.1 L560.0,149.7 L573.3,149.8 L586.7,151.4 L600.0,153.1 L613.3,150.4 L626.7,152.4 L640.0,147.4 L653.3,147.0 L666.7,147.0 L680.0,152.0 L693.3,147.6 L706.7,151.1 L720.0,152.7 L733.3,148.0 L746.7,149.3 L760.0,153.4 L773.3,147.6 L786.7,150.1 L800.0,147.9 L813.3,151.6 L826.7,170.4 L840.0,171.2 L853.3,153.2 L866.7,152.9 L880.0,152.6 L893.3,148.4 L906.7,147.8 L920.0,152.2 L933.3,151.2 L946.7,149.3 L960.0,150.1 L973.3,148.8 L986.7,152.1 L1000.0,152.8 L1013.3,146.6 L1026.7,148.3 L1040.0,148.1 L1053.3,147.4 L1066.7,175.3 L1080.0,147.4 L1093.3,148.2 L1106.7,147.6 L1120.0,124.7 L1133.3,150.2 L1146.7,149.6 L1160.0,148.4 L1173.3,153.5 L1186.7,126.7 L1200.0,147.8" fill="none" stroke="#6a6a72" stroke-width="1" opacity=".4"/>
         <path d="M0.0,233.7 L13.3,232.7 L26.7,230.0 L40.0,229.1 L53.3,231.6 L66.7,228.7 L80.0,231.7 L93.3,229.2 L106.7,226.3 L120.0,226.4 L133.3,227.9 L146.7,226.5 L160.0,233.1 L173.3,228.2 L186.7,228.3 L200.0,227.1 L213.3,228.0 L226.7,234.0 L240.0,227.9 L253.3,228.4 L266.7,225.8 L280.0,229.8 L293.3,227.5 L306.7,225.8 L320.0,226.6 L333.3,226.2 L346.7,256.8 L360.0,233.8 L373.3,227.1 L386.7,232.4 L400.0,232.2 L413.3,230.0 L426.7,231.0 L440.0,232.7 L453.3,230.1 L466.7,231.7 L480.0,233.4 L493.3,230.6 L506.7,225.9 L520.0,232.5 L533.3,233.8 L546.7,226.5 L560.0,260.7 L573.3,229.6 L586.7,203.3 L600.0,229.9 L613.3,201.8 L626.7,230.3 L640.0,226.4 L653.3,227.9 L666.7,228.0 L680.0,227.5 L693.3,234.0 L706.7,229.0 L720.0,231.5 L733.3,231.0 L746.7,226.5 L760.0,227.9 L773.3,228.4 L786.7,225.9 L800.0,260.9 L813.3,227.6 L826.7,231.8 L840.0,229.7 L853.3,234.1 L866.7,228.4 L880.0,229.8 L893.3,226.4 L906.7,234.2 L920.0,229.0 L933.3,233.6 L946.7,226.6 L960.0,228.0 L973.3,230.9 L986.7,228.1 L1000.0,228.9 L1013.3,233.2 L1026.7,227.1 L1040.0,231.5 L1053.3,231.9 L1066.7,229.0 L1080.0,228.6 L1093.3,228.6 L1106.7,233.7 L1120.0,225.9 L1133.3,227.9 L1146.7,261.2 L1160.0,228.8 L1173.3,228.1 L1186.7,210.2 L1200.0,231.1" fill="none" stroke="#4ec98f" stroke-width="1" opacity=".3"/>
       </svg>
@@ -308,7 +313,7 @@
 <footer class="site">
   <div class="wrap foot">
     <a class="brand" href="#top">
-      <img class="logo" style="width:34px;height:34px" src="astra-assets/logo-astra.png" alt="ASTRA MINDCORE logo">
+      <img class="logo" style="width:34px;height:34px" src="astra-assets/mindcore-icon-primary.svg" alt="ASTRA MINDCORE logo">
       <span class="btxt"><b>ASTRA</b><span>MINDCORE</span></span>
     </a>
     <nav class="flinks">

@@ -2,6 +2,32 @@
   const hdr=document.getElementById('hdr');
   addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
 
+  // mobile menu toggle
+  (function(){
+    const btn=document.getElementById('menuBtn');
+    const nav=document.getElementById('navLinks');
+    if(!btn||!nav)return;
+    function closeMenu(){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      nav.setAttribute('aria-hidden','true');
+    }
+    function openMenu(){
+      nav.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+      nav.setAttribute('aria-hidden','false');
+    }
+    btn.addEventListener('click',()=>{
+      nav.classList.contains('open')?closeMenu():openMenu();
+    });
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    document.addEventListener('click',e=>{
+      if(nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target))closeMenu();
+    });
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+    addEventListener('resize',()=>{if(innerWidth>960)closeMenu();});
+  })();
+
   // reveal
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
